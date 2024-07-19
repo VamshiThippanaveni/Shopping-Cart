@@ -1,0 +1,142 @@
+.header {
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  margin: 10px 0;
+}
+
+.cartDropdownMenu {
+  position: absolute !important;
+  /* Ensure it's positioned absolutely */
+  top: 100%;
+  /* Adjust this based on your header height */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  /* Set a fixed width that suits your design */
+  background-color: white;
+  /* or any other color to match your design */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 1000;
+  /* Ensure it appears above other elements */
+  padding: 10px;
+}
+
+.deleteIcon {
+  color: red;
+  /* Change this to your preferred color */
+  cursor: pointer;
+  margin-left: 10px;
+  /* Adjust spacing as needed */
+  transition: color 0.3s ease;
+}
+
+.deleteIcon:hover {
+  color: rgb(19, 0, 0);
+  /* Change color on hover */
+  transform: scale(1.1);
+  /* Slightly enlarge the icon on hover */
+}
+
+.cartItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  /* Optional: adds a separator between items */
+}
+
+
+.cartItemImg {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.cartItemDetail {
+  display: -webkit-inline-flex;
+  flex: 1;
+  padding: 0 20px;
+  flex-direction: column;
+}
+
+
+.Home {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.filters {
+  background-color: #343a40;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin: 10px;
+  height: 86vh;
+}
+
+.filters>span {
+  padding-bottom: 20px;
+}
+
+
+.title {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.productContainer {
+  display: flex;
+  width: 78%;
+  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.products {
+  width: 30%;
+  margin: 10px;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Media Queries */
+@media (max-width: 771px) {
+  .filters {
+    width: 40%;
+    padding: 10px;
+    margin: 5px;
+  }
+
+  .filters>span {
+    font-size: 10px;
+  }
+
+  .title {
+    font-size: 18px !important;
+  }
+
+  .productContainer {
+    width: 58%;
+    padding: 0;
+  }
+
+  .search {
+    display: none !important;
+  }
+
+  .products {
+    width: 100%;
+  }
+}
